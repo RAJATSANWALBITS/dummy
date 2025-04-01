@@ -15,4 +15,4 @@ jobs:
         shell: bash
         run: | 
           echo "This job is running on windows runner"
-          echo "Runner is $RUNNER_OS"
+          echo "Runner is $RUNNER_OSi"

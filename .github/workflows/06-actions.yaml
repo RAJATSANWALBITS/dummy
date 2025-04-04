@@ -6,6 +6,9 @@ on:
         debug:
           type: boolean
           default: false
+env:
+   MyVar1: "Hello from global env"
+   MyVar2: "world from global env"
 jobs:
   echo-data:
     runs-on: ubuntu-latest
@@ -23,3 +26,7 @@ jobs:
         run: |
           echo "My var: ${{ vars.MY_VAR }}"
           echo "Inputs: ${{ inputs.debug }}"
+      - name: Print environment variables:
+         run: |
+            echo "Myvar1: ${{ env.MyVar1}}"
+            echo "MyVar2: ${{ env.MyVar2}}"

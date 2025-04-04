@@ -31,6 +31,9 @@ jobs:
           echo "Inputs: ${{ inputs.debug }}"
           
       - name: Print environment variables
+        env:
+           MyVar1: "Hello from step env"
+           MyVar2: "Hello from step env"
         run: |
           echo "Myvar1: ${{ env.MyVar1}}"
           echo "MyVar2: ${{ env.MyVar2}}"

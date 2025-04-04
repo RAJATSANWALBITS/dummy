@@ -1,7 +1,11 @@
 name: 06-Actions-workflow
 on:
-  - push
-  - workflow_dispatch
+   push:
+   workflow_dispatch:
+      inputs:
+        debug:
+          type: boolean
+          default: false
 jobs:
   echo-data:
     runs-on: ubuntu-latest

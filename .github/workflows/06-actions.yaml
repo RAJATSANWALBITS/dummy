@@ -12,6 +12,9 @@ env:
 jobs:
   echo-data:
     runs-on: ubuntu-latest
+    env: 
+       MyVar1: "Hello from job env"
+       MyVar2: "Hello from job env"
     steps:
       - name: display Information
         run: |

@@ -26,7 +26,8 @@ jobs:
         run: |
           echo "My var: ${{ vars.MY_VAR }}"
           echo "Inputs: ${{ inputs.debug }}"
-      - name: Print environment variables:
-         run: |
-            echo "Myvar1: ${{ env.MyVar1}}"
-            echo "MyVar2: ${{ env.MyVar2}}"
+          
+      - name: Print environment variables
+        run: |
+          echo "Myvar1: ${{ env.MyVar1}}"
+          echo "MyVar2: ${{ env.MyVar2}}"

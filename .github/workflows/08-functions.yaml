@@ -22,7 +22,7 @@ jobs:
            run: echo "I will execute if not cancelled"
 
          - name: I will execute
-           if: $ {{ cancelled() }}
+           if: ${{ cancelled() }}
            run: echo "I will execute if cancelled"
            
 

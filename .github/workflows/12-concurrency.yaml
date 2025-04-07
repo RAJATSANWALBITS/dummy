@@ -11,6 +11,6 @@ jobs:
               echo "Hello Paranet step"
               exit 0
          - name: Child step
-           if: steps.paranet.outputs.status=='success'
+           if: steps.parent.outputs.status=='success'
            run: echo "I am success"
          

@@ -13,4 +13,4 @@ jobs:
          - name: Child step
            run: |
               echo "I am success"
-              echo "${{steps.parent.outputs.status}}"
+              echo "Status of previous step: ${{steps.parent.outputs.status}}"

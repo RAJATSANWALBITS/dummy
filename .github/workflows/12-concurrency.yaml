@@ -1,0 +1,16 @@
+name: Concurrency
+on: 
+   workflow_dispatch:
+jobs:
+   ping:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Parent step
+           id: parent
+           run : | 
+              echo "Hello Paranet step"
+              exit 0
+         - name: Child step
+           if: steps.paranet.outputs.status=='success'
+           run: echo "I am success"
+         
